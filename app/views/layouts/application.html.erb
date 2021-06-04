@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FreamworkApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  </head>
+
+  <body>
+    <header>
+      <div class="header_wrapper">
+        <div class="header_left">
+          <div class="header_home_btn">
+            <%=link_to("ホーム","/home/top") %>
+          </div>
+        </div>
+
+        <div class="header_right">
+          <div class="header_menu">
+            <ul class="header_menu_index">
+              <li><%= link_to("自分史", "/my_history")%></li>
+              <li><%= link_to("人生曲線","/motivation")%></li>
+              <li><%= link_to("SWOT分析","/swot")%></li>
+              <li><%= link_to("Will,Can,Must","/wcm")%></li>
+              <li><%= link_to("マインドマップ","/mmp")%></li>
+            </ul> 
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <% if flash[:notice]%>
+      <div class="flash">
+        <%= flash[:notice]%>
+      </div>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>

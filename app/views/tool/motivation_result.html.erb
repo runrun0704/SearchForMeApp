@@ -1,0 +1,123 @@
+<div class="motivation_page j">
+
+    <div class="tool_top">
+        <div class="container">
+            <div class="tool_ttl">
+                <h2>モチベーショングラフ</h2>
+                <p>人生曲線</p>
+            </div>
+
+            <div class="tool_int">
+                <p><img src="/sample.img/freamwork.app_motivation.jpg" class="tool_image"></p>
+                <p class="tool_txt">
+                    あなたはどんな環境で力を発揮してきましたか？
+                    モチベーションは環境によって左右されることが多いと思います。
+                    モチベーションに影響した出来事を思い出しながらグラフに書き込みましょう。
+                    またその時の感情を思い出してみるとより質の高いものが出来上がります。
+                    自分が一番心地が良いと感じる環境、或いは好まない環境を探してみましょう。
+                </p>    
+            </div>    
+        </div>
+    </div>
+
+    <div class="hint_modal_wrapper">
+        <div class="modal">
+            <div class="close_modal">
+                <i class="far fa-times-circle "></i>
+            </div>    
+            <div class="modal_ttl">
+                <h2>モチベーショングラフを作る上でのポイント</h2>
+            </div>
+            <div class="modal_txt">
+                <p>その当時のモチベーションをグラフにして可視化します。</p>
+                <div class="motivation_modal">
+                    <p class="moivation_modal_ttl">以下のポイントに注目して、グラフを作成しましょう。
+                    <ul class="motivation_modal_index">
+                        <li>・置かれていた環境を振り返る</li>
+                        <p>
+                            人間関係や、その雰囲気を振り返りましょう。
+                            自分がどんな環境を好むのか、どんな環境に適しているのかを調べます。
+                        </p>
+                        <li>・感情や思考、行動を振り返る</li>
+                        <p>
+                            自分が抱いた感情や、その時考えたことと起こしたアクションを思い出してみましょう。
+                            そのために「コメント」にたして「なぜ」や「どういう時」と自ら問いかけましょう。
+                        </p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal_open_btn">
+        <div class="hint_btn">
+            <h4>ヒント</h4>
+        </div>
+    </div>
+
+    <div class="mtv_main">
+        <div class="container">
+            <%= line_chart @graph.order(age: :asc).pluck(:age, :happy) ,xtitle:"年齢",ytitle:"モチベーション",label:"モチベーション" %>
+
+            <div class="mtv_card_index">
+                <% @graph.each  do|graph| %>
+                    <div class="mtv_card">
+                        <div class="mtv_card_top">
+                            <p><%= graph.age %>歳</p>
+                            <p><%= graph.happy %>%</p>
+                        </div>
+                        <div class="mtv_card_bottom">    
+                            <p><%= graph.comment %></p>
+                        </div>   
+                        <div class="mtv_destroy">
+                            <%= link_to("削除","/motivation/#{graph.id}/destroy",{method:"post"})%> 
+                        </div>
+                    </div>
+                    
+                <% end %>
+            </div>
+   
+            <div class="mtv_form_top">
+                <div class="mtv_form_ttl">
+                    <h2>データを追加する</h2>
+                </div>
+                <div class="mtv_form_txt">
+                    <p>下記のフォームにデータを入力すると、グラフに値が代入されます。</p>
+                </div>
+            </div>
+
+            
+
+            <%= form_tag ("/motivation") do%>
+
+                <div class="mtv_form_wrapper">
+                    <div class="mtv_form">
+                        <h3>年齢</h3>
+                        <input type="number" name="age">
+                    </div>
+
+                    <div class="mtv_form">
+                        <h3>モチベーション度</h3>
+                        <input type="number" name="happy">
+                    </div>
+
+                    <div class="mtv_form">
+                        <h3>コメントを入力してください</h3>
+                        <textarea name="comment"></textarea>
+                    </div>
+
+                    <div class="mtv_form">
+                        <h3>パスを入力してください</h3>
+                        <input type="text" name="pass" value="<%= params[:pass] %>" >
+                    </div>
+
+                    <div class="mtv_form_btn">
+                        <input type="submit" class="mtv_submit">
+                    </div>    
+                </div>
+            <%end%>
+        </div>
+    </div>
+
+    
+</div>

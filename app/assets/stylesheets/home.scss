@@ -1,0 +1,202 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  html {
+    font: 100%/1.5 'Avenir Next', 'Hiragino Sans', sans-serif;
+    line-height: 1.7;
+    letter-spacing: 1px;
+  }
+
+  ul, li {
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #2d3133;
+    font-size: 14px;
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    color:#676767;
+  }
+
+  input {
+    background-color: transparent;
+    outline-width: 0;
+  }
+
+  form input[type="submit"] {
+    border: none;
+    cursor: pointer;
+  }
+}
+/* 共通レイアウト */
+body {
+  background-color: #f6f7f8;
+  margin: 0;
+  min-height: 1vh;
+}
+
+  
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  clear: both;
+}
+
+.j{
+  padding-top:64px;
+}
+
+/* ヘッダー */
+header{
+  height:64px;
+  .header_wrapper{
+    .header_left{
+      padding-left: 20px;
+      float:left;
+      line-height: 64px;
+      a{
+        font-size: 18px;
+      }
+    }
+    .header_right{
+      float:right;
+      .header_menu{
+        .header_menu_index{
+          padding-right:10px; 
+          li{
+            font-size: 18px;
+            float:left;
+            line-height: 64px;
+            padding-left:15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* エラー関係 */
+.flash {
+  padding: 10px 0;
+  color: white;
+  background: #F3DF75;
+  text-align: center;
+  position: absolute;
+  top: 64px;
+  z-index: 0;
+  width: 100%;
+  border-radius: 0 0 2px 2px;
+  font-size: 14px;
+}
+.form-error {
+  color: #ff4d75;
+}
+
+/* トップページ */
+.top_page{
+  .top_header{
+    height: 500px;
+    width:auto;
+    background-image: url("/sample.img/freamwork.app_toppage_edit2.jpg");
+    background-size:cover;
+    padding-top:30px; 
+    h1,p{
+      text-align:center;
+    }
+  }
+
+  .top_main_wrapper{
+    display:flex;
+    .top_main{
+      width: 50%;
+      padding:30px 40px;
+      text-align:left;
+      .top_main_ttl{
+        font-size:30px;
+        h3{
+          font-family: 'M PLUS Rounded 1c', sans-serif;
+          font-weight: 100;
+          color:#112633;
+        }
+      }
+      .top_main_index{
+        border:dotted 2px #112633;
+        border-radius: 20px;
+        padding:15px 0px 15px 7px;
+        p{
+          color:#2A444D;
+          padding-left:10px;
+        }
+      }
+      a{
+        color:#112633;
+        font-size:16px;
+      }
+      a:hover{
+        color:#2d3133;
+      }
+    }
+    .top_sub{
+      margin:0 auto;
+      .top_warning{
+        padding-top:40px;
+        h4,p{
+          text-align: center;
+        }
+        .top_warning_btn{
+          margin:25px 30px 0 30px;
+          background-color:#f3de75d8;
+          opacity: 0.8;
+          padding:10px 5px;
+          a{
+            color:#676767;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Warning */
+.warning_page{
+  .warning_ttl{
+    text-align:center;
+    font-size:30px;
+  }
+  .warning_img{
+    width:100%;
+    height:450px;
+  }
+  .warning_index{
+    padding-top:30px;
+    .warning_card{
+      padding-left: 5px;
+      padding-bottom:30px ;
+      h2{
+        background-color: #ff4d75;
+        margin-bottom: 10px;
+        color: antiquewhite;
+      }
+      .warning_txt{
+        padding-left: 15px;
+      }
+      span,.warning_accent{
+        color: #ff4d75;
+      }
+      .warning_accent{
+        padding:5px 0;
+      }
+    }
+  }
+
+}

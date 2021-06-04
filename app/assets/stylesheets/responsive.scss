@@ -1,0 +1,76 @@
+/* タブレット向けレイアウト */
+@media (max-width: 1024px){
+    .container{
+        max-width: 80%;
+        padding-left: 15px;
+        padding-right: 15px;
+        clear: both;
+    }
+    .tool_top{
+        .tool_int{
+            width:75%;
+            margin:0 auto;
+        }
+    }
+    .hint_modal_wrapper{
+        .modal{
+            left: 29%;
+        }
+    }
+}
+@media (max-width:900px){
+    .tool_top{
+        .container{
+            .tool_int{
+                display: flex;
+                flex-direction: column;
+                p .tool_image{
+                    width:100%;
+                }
+            }
+        }    
+    }
+    .hint_modal_wrapper{
+        .modal{
+            left: 20%;
+        }
+    }
+}
+
+
+@media (max-width:800px){
+    .swot_wrapper{
+        .container{
+            .swot_form,.Xswot_form{
+                text-align:center;
+                .swot_pear{
+                    display:flex;
+                    flex-direction: column; 
+                }
+            }
+        }
+    }
+}
+/* スマホ向けのレイアウト */
+@media (max-width:670px){
+    .top_page{
+        .top_header{
+            background-size: cover;
+        }
+        .top_main_wrapper{
+            display: flex;
+            flex-direction: column;
+            .top_main{
+                width: 80%;
+            }
+            .top_sub{
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .hint_modal_wrapper{
+        .modal{
+            left: 10%;
+        }
+    }
+}

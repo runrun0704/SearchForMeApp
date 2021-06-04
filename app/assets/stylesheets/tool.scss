@@ -1,0 +1,377 @@
+// Place all the styles related to the tool controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* 共通レイアウト */
+.tool_top{
+    margin-bottom:75px;
+    .tool_ttl{
+        text-align: center;
+        padding-bottom: 20px;
+        h2{
+            font-size: 30px;
+        }
+        p{
+            font-size: 12pxpx;
+            color:#676767;
+        }
+    }
+    .tool_int{
+        background-color: white;
+        /* 画像と文字列の横並びコード */
+        display: flex;
+        justify-content: space-between;
+        p{
+            display: inline-block;
+            vertical-align: top;
+        } 
+        .tool_image{
+            height: 100%;
+            width:300px;
+        }
+        .tool_int>p{
+            width:49%;
+        }
+        .tool_txt{
+            padding:20px 20px 20px 10px;
+        }
+
+    }       
+    p{
+        color:#1D3540;
+    }
+}
+
+/* 自分史 */
+.my_history_page{
+    .history_card_index{
+        padding-top:15px;
+        background-color: #F5F6F7;
+        .history_card{
+            padding-bottom:30px;
+            .my_history_form{
+                width:100%;
+                height: 300px;
+            }
+        }
+    }
+}
+
+/* モチベーション */
+.motivation_page{
+    .mtv_main{
+        margin-bottom: 60px;
+        .mtv_card_index{
+            margin-bottom: 40px;
+            .mtv_card{
+                margin-bottom:20px;
+                box-shadow: 2px 2px 4px gray;
+                .mtv_card_top{
+                    p{
+                        display:inline-block;
+                        font-size:20px;
+                        padding:5px 10px;
+                    }    
+                }
+                .mtv_card_bottom{
+                    padding-left:10px;
+                    font-size: 18px;
+                }
+                .mtv_destroy{
+                    text-align: right;
+                    a{
+                        font-size:16px;
+                        padding:5px 10px;
+                        color:#676767;
+                    }
+                    &:hover{
+                        opacity:0.8;
+                    }
+                }
+            }
+        }
+
+        .mtv_form_top{
+            margin-top: 40px;
+        }
+        
+        .mtv_form_wrapper{
+            margin-top:20px;
+            .mtv_form{
+                display: flex;
+                margin:15px;
+                input{
+                    border-top: none;
+                    border-left:none;
+                    border-right:none;
+                }
+                h3{
+                    padding-right:20px;
+                }
+
+            }
+            .mtv_form_btn{
+                text-align: right;
+                .mtv_submit{
+                    background-color: #cccbcb;
+                    opacity:0.7;
+                    padding:10px 40px;
+                }
+                &:hover{
+                    opacity:0.9;
+                }
+            }
+        }
+        
+    }
+    .motivation_search{
+        padding:20px 0;
+        .mtv_search_wrapper{
+            padding:25px 10px;
+            .mtv_search_form_wrapper{
+                padding-right:30px;
+                .mtv_search_form{
+                    border-top: none;
+                    border-left:none;
+                    border-right:none;
+                }
+            }    
+        }
+    }
+
+    .mtv_submit{
+        background-color: #cccbcb;
+        opacity:0.7;
+        padding:10px 40px;
+    }
+    &:hover{
+        opacity:0.9;
+    }
+
+}  
+
+/* SWOT分析 */
+.swot_page{
+    .swot_wrapper{
+        padding-bottom: 30px;
+        .swot_form{
+            text-align: center;
+            .swot_pear{
+                width:100%;
+                display:flex;
+                .swot_card{
+                    padding: 0 100px 0 0;
+                    textarea{
+                        height:100px;
+                        width:300px;
+                    }
+                }
+            }
+        }
+        .swot_center{
+            text-align:center;
+            font-size: 64px;
+        }
+        .Xswot_form{
+            .swot_pear{
+                display:flex;
+                .swot_card{
+                    padding:0 100px 0 0;
+                    textarea{
+                        height:100px;
+                        width:300px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* WCM */
+.wcm_page{
+    .wcm_wrapper{
+        padding-bottom:40px;
+        .wcm_set{
+            padding-bottom: 30px;
+            .wcm_ttl{
+                text-align: center;
+            }
+            .wcm_txt{
+                text-align: center;
+                font-size: 16px;
+            }
+            .wcm_form{
+                width:100%;
+                height: 200px;
+            }
+        }
+
+        .wcm_bottom{
+            .wcm_answer_txt{
+                padding:0  15px;
+            }
+            .wcm_answer{
+                padding:15px;
+                display: flex;
+                h3{
+                    padding-right:15px;
+                }
+                .wcm_input{
+                    border-top: none;
+                    border-left:none;
+                    border-right:none;
+                    width:50%;
+                }
+            }
+        }
+    }
+}
+
+/* マインドマップ */
+.mmp_page{
+    .mmp_wrapper{
+        .mmp_warning{
+            .mmp_warning_ttl{
+                font-size: 22px;
+                color:rgb(241, 68, 68);
+                text-align: center;
+            }
+            .mmp_warning_txt{
+                text-align: center;
+                padding:15px 0 5px 0;
+            }
+            .mmp_recsite{
+                border: 2px dotted #676767;
+                border-left:none;
+                border-right:none;
+                margin-bottom:30px;
+                p{
+                    padding-left:10px;
+                }
+            }
+        }
+    }
+    .mmp_int{
+        .mmp_int_ttl{
+            font-size:22px;
+        }
+        .mmp_int_sec{
+            padding:15px 0;
+            .mmp_int_sec_ttl{
+                font-size: 18px;
+            }
+            .mmp_int_sec_txt{
+                ul,li{
+                    list-style-type:square;
+                    color: #676767;
+                    padding-left:15px;
+                    padding-bottom:10px;
+                }
+            }
+            .last_facter{
+                padding-bottom: 50px;
+            }
+        }
+    }
+}
+
+/* モーダル */
+.hint_modal_wrapper{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    display: none;
+}
+  
+.modal {
+    position: absolute;
+    top: 20%;
+    left: 34%;
+    background-color: #e6ecf0;
+    padding: 20px 0 40px;
+    border-radius: 10px;
+    width: 450px;
+    height: auto;
+    text-align: center;
+    .modal_ttl{
+        h2{
+            padding:15px 30px;
+        }
+    }
+    .modal_txt{
+        p{
+            margin:0 15px;
+            padding-bottom: 10px;
+        }
+        .my_history_modal{
+            margin-top:15px;
+            padding-left: 10px;
+            .my_history_modal_index{
+                text-align: left;
+                p{
+                    padding-left:15px;
+                }
+            }
+        }
+        .motivation_modal{
+            .motivation_modal_index{
+                text-align:left;
+                padding-left:15px ;
+                p{
+                    padding-left: 15px;
+                }
+            }
+        }
+        .swot_modal{
+            .swot_modal_index{
+                text-align: left;
+                padding: 10px 15px;
+                p{
+                    font-size:14px;
+                }
+                li{
+                    padding:5px 0;
+                    color: #676767;
+                }
+            }
+            .swot_modal2{
+                p{
+                    padding:10px 0;
+                }
+            }
+        }
+        .wcm_modal{
+            p{
+                padding:10px 0;
+                color:black;
+            }
+        }
+    }
+}
+  
+.fa-times-circle {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: rgba(128, 128, 128, 0.46);
+    cursor: pointer;
+}
+.hint_btn{
+    float:right;
+    margin-bottom:10px;
+    background-color: #f3de75d8;
+    opacity: 0.7;
+    margin-right:100px;
+    cursor: pointer;
+    h4{
+        padding:5px 10px;
+        color: rgb(255, 248, 248);
+    }
+    &:hover{
+        opacity: 1.0;
+    }
+}
