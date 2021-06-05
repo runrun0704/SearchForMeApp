@@ -71,6 +71,12 @@ header{
     .header_right{
       float:right;
       .header_menu{
+        .menu-icon {
+          float: right;
+          font-size: 25px;
+          padding: 21px 10px;
+          display: none;
+        }
         .header_menu_index{
           padding-right:10px; 
           li{
@@ -199,4 +205,29 @@ header{
     }
   }
 
+}
+
+/* メニューバー */
+.media_menu_bar{
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+.menu_bar {
+  position: absolute;
+  margin: 0 auto;
+  top: 20%;
+  left: 10%;
+  background-color: #e6ecf0;
+  padding: 20px 0 40px;
+  border-radius: 10px;
+  width: 80%;
+  height: auto;
+  text-align: center;
 }

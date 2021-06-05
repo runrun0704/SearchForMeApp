@@ -25,6 +25,7 @@
 
         <div class="header_right">
           <div class="header_menu">
+            <span class="fa fa-bars menu-icon"></span>
             <ul class="header_menu_index">
               <li><%= link_to("自分史", "/my_history")%></li>
               <li><%= link_to("人生曲線","/motivation")%></li>
@@ -42,6 +43,22 @@
         <%= flash[:notice]%>
       </div>
     <% end %>
+
+    <div class="media_menu_bar">
+      <div class="menu_bar">
+        <div class="close_menu_bar">
+          <i class="far fa-times-circle "></i>
+        </div>    
+        <h3>メニュー一覧</h3>
+        <ul class="media_menu_index">
+          <li><%= link_to("自分史", "/my_history")%></li>
+          <li><%= link_to("人生曲線","/motivation")%></li>
+          <li><%= link_to("SWOT分析","/swot")%></li>
+          <li><%= link_to("Will,Can,Must","/wcm")%></li>
+          <li><%= link_to("マインドマップ","/mmp")%></li>
+        </ul>
+      </div>   
+    </div>
 
     <%= yield %>
   </body>

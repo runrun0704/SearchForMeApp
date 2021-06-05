@@ -74,3 +74,25 @@
         }
     }
 }
+@media (max-width:517px){
+    .hint_modal_wrapper{
+        .modal{
+            width:100%;
+            left: 0;
+        }
+    }
+    header{
+        .header_wrapper{
+            .header_right{
+                .header_menu{
+                    .menu-icon{
+                        display: inline-block;
+                    }
+                    .header_menu_index{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }        
+}
