@@ -105,6 +105,9 @@
                     border-left:none;
                     border-right:none;
                 }
+                textarea{
+                    height:100px;
+                }
                 h3{
                     padding-right:20px;
                 }
@@ -360,18 +363,28 @@
     color: rgba(128, 128, 128, 0.46);
     cursor: pointer;
 }
-.hint_btn{
-    float:right;
-    margin-bottom:10px;
-    background-color: #f3de75d8;
-    opacity: 0.7;
-    margin-right:100px;
-    cursor: pointer;
-    h4{
-        padding:5px 10px;
-        color: rgb(255, 248, 248);
+.hint_btn_txt{
+    p{
+        text-align: right;
+        padding-right: 15px ;
+        color:#676767;
+    }   
+}
+.modal_open_btn{
+    .hint_btn{
+        float: right;
+        margin-bottom:10px;
+        background-color: #f3de75d8;
+        opacity: 0.7;
+        margin-right:100px;
+        cursor: pointer;
+        h4{
+            padding:5px 10px;
+            color: rgb(255, 248, 248);
+        }
+        &:hover{
+            opacity: 1.0;
+        }
     }
-    &:hover{
-        opacity: 1.0;
-    }
+
 }

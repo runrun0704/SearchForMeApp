@@ -16,7 +16,7 @@ body{
   }
 
   a {
-    text-decoration: none;
+    text-decoration:none;
     color: #2d3133;
     font-size: 14px;
   }
@@ -34,6 +34,10 @@ body{
   form input[type="submit"] {
     border: none;
     cursor: pointer;
+  }
+  input , select , textarea , button{
+    font-size: 100%;
+    font-family: inherit;
   }
 }
 /* 共通レイアウト */
@@ -230,4 +234,11 @@ header{
   width: 80%;
   height: auto;
   text-align: center;
+  .media_menu_index{
+    text-align: center;
+    a{
+      text-decoration: underline;
+      padding:5px 10px;
+    }
+  }
 }
