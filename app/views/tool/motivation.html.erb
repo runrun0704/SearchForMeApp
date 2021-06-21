@@ -92,10 +92,10 @@
                     </div>
 
                     <div class="mtv_form">
-                        <h3>パスを入力してください</h3>
+                        <h3>パスワードを入力してください</h3>
                         <input type="text" name="pass" value="<%= params[:pass] %>" >
                     </div>
-
+                    <p>初めて登録する方も、こちらに入力ください</p>
                     <div class="mtv_form_btn">
                         <input type="submit" class="mtv_submit">
                     </div> 
@@ -104,7 +104,8 @@
 
             <div class="motivation_search">
                 <div class="search_ttl">
-                    <h3>パスが既存であればこちらに入力してください</h3>
+                    <h3>パスワードが既存であればこちらに入力してください</h3>
+                    <p>※こちらにパスワードを入力すると登録したグラフのページに移動します</p>
                 </div>
                 <div class="mtv_search_wrapper">
                     <%= form_tag("/motivation_search",{method:"get"}) do %>
