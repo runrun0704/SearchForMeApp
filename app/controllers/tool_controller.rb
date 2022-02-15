@@ -19,6 +19,7 @@ class ToolController < ApplicationController
       flash[:notice] = "追加されました"
       redirect_to("/motivation/#{@graph.pass}")
     else
+      flash[:notice] = "入力に誤りがあります"
       render("tool/motivation")
     end  
     
