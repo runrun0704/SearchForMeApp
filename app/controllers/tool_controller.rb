@@ -23,8 +23,18 @@ class ToolController < ApplicationController
   end
 
   def my_history_result
-    @data = Datum.where(id_pass: params[:id_pass])
+    @data = Datum.find_by(id_pass: params[:id_pass])
   end 
+
+  def my_history_search
+    data = Datum.search(params[:search])
+    if data.present?
+      @data = data
+    else
+      flash[:notice] = "見つかりませんでした"
+      render("tool/my_history")
+    end    
+  end  
   
   #モチベーショングラフ
   def motivation

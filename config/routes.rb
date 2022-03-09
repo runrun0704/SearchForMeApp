@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     get "my_history" => "tool#my_history"
     post "my_history" => "tool#my_history_submit"
     get "my_history/:id_pass" => "tool#my_history_result"
+    get "my_history_search" => "tool#my_history_search"
 
     #SWOT
     get "swot" => "tool#swot"

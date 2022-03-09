@@ -55,14 +55,13 @@
     </div>
 
     <%= form_tag ("/my_history") do%>
-    <% @data.each do|data| %>
         <div class="history_card_index">
             <div class="history_card">
                 <div class="container">
                     <h3 class="history_card_ttl">
                         幼少時代
                     </h3>
-                    <textarea placeholder="表示させたい文章" class="my_history_form" name="m_h_y"><%= data.m_h_y%></textarea>
+                    <textarea placeholder="表示させたい文章" class="my_history_form" name="m_h_y"><%= @data.m_h_y%></textarea>
                 </div>
             </div> 
 
@@ -71,7 +70,7 @@
                     <h3 class="history_card_ttl">
                         小学校時代
                     </h3>
-                    <textarea placeholder="表示させたい文章" class="my_history_form" name="m_h_s"></textarea>
+                    <textarea placeholder="表示させたい文章" class="my_history_form" name="m_h_s"><%= @data.m_h_s%></textarea>
                 </div>
             </div> 
 
@@ -80,7 +79,7 @@
                     <h3 class="history_card_ttl">
                         中学校時代
                     </h3>
-                    <textarea placeholder="表示させたい文章" class="my_history_form" name="m_h_t"></textarea>
+                    <textarea placeholder="表示させたい文章" class="my_history_form" name="m_h_t"><%= @data.m_h_t%></textarea>
                 </div>
             </div> 
 
@@ -89,7 +88,7 @@
                     <h3 class="history_card_ttl">
                         高校時代
                     </h3>
-                    <textarea placeholder="表示させたい文章" class="my_history_form" height="300px" name="m_h_k"></textarea>
+                    <textarea placeholder="表示させたい文章" class="my_history_form" height="300px" name="m_h_k"><%= @data.m_h_k%></textarea>
                 </div>
             </div> 
 
@@ -98,19 +97,32 @@
                     <h3 class="history_card_ttl">
                         大学時代
                     </h3>
-                    <textarea placeholder="表示させたい文章" class="my_history_form" name="m_h_d"></textarea>
+                    <textarea placeholder="表示させたい文章" class="my_history_form" name="m_h_d"><%= @data.m_h_d%></textarea>
                 </div>
             </div>
-            <div class="mtv_form">
-                <h3>IDを入力してください</h3>
-                <input type="text" name="id_pass" value="<%= params[:id_pass] %>" >
-            </div>
-            <p>初めて登録する方も、こちらに入力ください</p>
-            <div class="mtv_form_btn">
-                <input type="submit" class="mtv_submit">
-            </div>  
+            <div class = "form_con">
+                <div class="form_id_pass">
+                    <h3>IDを入力してください</h3>
+                    <input type="text" name="id_pass" value="<%= params[:id_pass] %>" >
+                </div>
+                <p>初めて登録する方も、こちらに入力ください</p>
+                <div class="form_btn">
+                    <input type="submit" class="form_submit">
+                </div>  
+            </div>       
+        </div>  
+    <%end%>
+    <div class="search_con">
+        <div class="search_ttl">
+            <h3>IDが既存であればこちらに入力してください</h3>
+            <p>※こちらにIDを入力すると登録したグラフのページに移動します</p>
         </div>
-    <%end%>    
-    <%end%>    
+        <div class="search_wrapper">
+            <%= form_tag("/motivation_search",{method:"get"}) do %>   
+                    <span class="search_form_wrapper"><%= text_field_tag :search ,"",{class: "search_form"} %></span>
+                    <span class="search_btn"><%= submit_tag '探す',class:"submit" %>
+            <% end %>
+        </span>
+    </div>    
 
 </div>
