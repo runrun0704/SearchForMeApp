@@ -55,13 +55,14 @@
     </div>
 
     <%= form_tag ("/my_history") do%>
+    <% @data.each do|data| %>
         <div class="history_card_index">
             <div class="history_card">
                 <div class="container">
                     <h3 class="history_card_ttl">
                         幼少時代
                     </h3>
-                    <textarea placeholder="表示させたい文章" class="my_history_form" name="m_h_y"></textarea>
+                    <textarea placeholder="表示させたい文章" class="my_history_form" name="m_h_y"><%= data.m_h_y%></textarea>
                 </div>
             </div> 
 
@@ -109,6 +110,7 @@
                 <input type="submit" class="mtv_submit">
             </div>  
         </div>
+    <%end%>    
     <%end%>    
 
 </div>

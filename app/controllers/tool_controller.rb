@@ -1,7 +1,32 @@
 class ToolController < ApplicationController
+  #自分史
   def my_history
   end
 
+  def my_history_submit
+    @m_h = Datum.new(
+      m_h_y: params[:m_h_y],
+      m_h_s: params[:m_h_s],
+      m_h_t: params[:m_h_t],
+      m_h_k: params[:m_h_k],
+      m_h_d: params[:m_h_d],
+      id_pass: params[:id_pass]
+    )
+
+    if @m_h.save
+      flash[:notice] = "追加されました"
+      redirect_to("/my_history/#{@m_h.id_pass}")
+    else
+      flash[:notice] = "入力に誤りがあります"
+      render("tool/my_history") 
+    end  
+  end
+
+  def my_history_result
+    @data = Datum.where(id_pass: params[:id_pass])
+  end 
+  
+  #モチベーショングラフ
   def motivation
     @graphs = {'15' => 100, '17' => 30, '18' => 50}
     @graph = Graph.new()
@@ -50,12 +75,15 @@ class ToolController < ApplicationController
     end    
   end
   
+  #SWOT
   def swot
   end
 
+  #WCM
   def wcm
   end
 
+  #MMP  
   def mmp
   end
 end
