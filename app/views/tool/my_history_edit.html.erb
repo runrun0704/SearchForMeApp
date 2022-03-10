@@ -1,14 +1,14 @@
 <div class="my_history_page j">
     <%= render partial:'layouts/my_history_lay' %>
     
-    <%= form_tag ("/my_history") do%>
+    <%= form_tag ("/my_history_update") do%>
         <div class="history_card_index">
             <div class="history_card">
                 <div class="container">
                     <h3 class="history_card_ttl">
                         幼少時代
                     </h3>
-                    <textarea placeholder="表示させたい文章" class="my_history_form" name="m_h_y"><%= @data.m_h_y%></textarea>
+                    <textarea placeholder="表示させたい文章" class="my_history_form" name="m_h_y"><%= @m_h.m_h_y%></textarea>
                 </div>
             </div> 
 
@@ -17,7 +17,7 @@
                     <h3 class="history_card_ttl">
                         小学校時代
                     </h3>
-                    <textarea placeholder="表示させたい文章" class="my_history_form" name="m_h_s"><%= @data.m_h_s%></textarea>
+                    <textarea placeholder="表示させたい文章" class="my_history_form" name="m_h_s"><%= @m_h.m_h_s%></textarea>
                 </div>
             </div> 
 
@@ -26,7 +26,7 @@
                     <h3 class="history_card_ttl">
                         中学校時代
                     </h3>
-                    <textarea placeholder="表示させたい文章" class="my_history_form" name="m_h_t"><%= @data.m_h_t%></textarea>
+                    <textarea placeholder="表示させたい文章" class="my_history_form" name="m_h_t"><%= @m_h.m_h_t%></textarea>
                 </div>
             </div> 
 
@@ -35,7 +35,7 @@
                     <h3 class="history_card_ttl">
                         高校時代
                     </h3>
-                    <textarea placeholder="表示させたい文章" class="my_history_form" height="300px" name="m_h_k"><%= @data.m_h_k%></textarea>
+                    <textarea placeholder="表示させたい文章" class="my_history_form" height="300px" name="m_h_k"><%= @m_h.m_h_k%></textarea>
                 </div>
             </div> 
 
@@ -44,7 +44,7 @@
                     <h3 class="history_card_ttl">
                         大学時代
                     </h3>
-                    <textarea placeholder="表示させたい文章" class="my_history_form" name="m_h_d"><%= @data.m_h_d%></textarea>
+                    <textarea placeholder="表示させたい文章" class="my_history_form" name="m_h_d"><%= @m_h.m_h_d%></textarea>
                 </div>
             </div>
             <div class = "form_con">
@@ -52,8 +52,9 @@
                     <h3>IDを入力してください</h3>
                     <input type="text" name="id_pass" value="<%= params[:id_pass] %>" >
                 </div>
+                <p>初めて登録する方も、こちらに入力ください</p>
                 <div class="form_btn">
-                    <%= link_to("更新","/my_history/#{@data.id_pass}/edit") %>
+                    <input type="submit" class="form_submit">
                 </div>  
             </div>       
         </div>  
