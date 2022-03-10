@@ -1,59 +1,6 @@
 <div class="my_history_page j">
-
-    <div class="tool_top">
-        <div class="container">
-            <div class="tool_ttl">
-                <h2>自分史</h2>
-                <p>過去から現在までの礎</p>
-            </div>
-            <div class="tool_int">
-                <p><img src="/sample.img/freamwork.app_myhistory.jpg" class="tool_image"></p>
-                <p class="tool_txt">
-                    今までに経験したことを可視化していきましょう。
-                    幼少時代から今までのことを、時代ごとに書き出してみよう。
-                    大きなイベントや出来事はもちろん、日常のほんの小さな事も書けるとより良いです。
-                    特に喜怒哀楽といった感情の起伏に関しては可能な限り書きましょう。
-                    書き終えたら、自分史を俯瞰して見てみましょう。
-                    どういったことに感情的になるのか、今まで夢中になったことの共通点を見つけられるはずです。
-                </p>    
-            </div>
-        </div>
-    </div>
-    <div class="hint_modal_wrapper">
-        <div class="modal">
-            <div class="close_modal">
-                <i class="far fa-times-circle "></i>
-            </div>    
-            <div class="modal_ttl">
-                <h2>自分史を作る上でのポイント</h2>
-            </div>
-            <div class="modal_txt">
-                <p>幼少時代から大学時代までの過去の経験を洗い出す</p>
-
-                <div class="my_history_modal">
-                    <p class="my_history_modal_ttl">
-                        何を書いて良いのかイメージできない方は２つのことを意識してみましょう
-                    </p>
-                    <ul class="my_history_modal_index">
-                        <li>「頑張ったこと」「ハマっていたこと」を書く</li>
-                        <p>自分の価値観やどういうモチベーションで自分が行動するかが簡単に見つけられる。</p>
-                        <li>喜怒哀楽ベースで書いてみる</li>
-                        <p>些細なことなことでも良いので、どんな出来事でどのように感情が動いたのかを書いてみましょう。</p>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    <%= render partial: 'layouts/my_hisotry_lay' %>
     
-     <div class="hint_btn_txt">
-        <p>作業に詰まったら参考にしましょう</p>
-    </div>
-    <div class="modal_open_btn">
-        <div class="hint_btn">
-            <h4>ヒント</h4>
-        </div>
-    </div>
-
     <%= form_tag ("/my_history") do%>
         <div class="history_card_index">
             <div class="history_card">
