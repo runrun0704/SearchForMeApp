@@ -105,6 +105,32 @@ class ToolController < ApplicationController
   def swot
   end
 
+  def swot_submit
+    @swot = Datum.new(
+      swot_s: params[:swot_s],
+      swot_w: params[:swot_w],
+      swot_o: params[:swot_o],
+      swot_t: params[:swot_t],
+      s_t: params[:s_t],
+      s_o: params[:s_o],
+      w_o: params[:w_o],
+      w_t: params[:w_t],
+      id_pass: params[:id_pass]
+    )
+
+    if @swot.save
+      flash[:notice] = "追加されました"
+      redirect_to("/swot/#{@swot.id_pass}")
+    else
+      flash[:notice] = "入力に誤りがあるか、IDがすでに存在しています"
+      render("tool/swot") 
+    end  
+  end  
+
+  def swot_result
+    @swot = Datum.find_by(id_pass: params[:id_pass])
+  end 
+
   #WCM
   def wcm
   end

@@ -9,7 +9,7 @@
                     <div class="swot_pear">
                         <div class="swot_card">
                             <h2 class="swot_ttl">Strength</h2>
-                            <textarea name="swot_s"></textarea>
+                            <textarea name="swot_s"><%= @swot.swot_s %></textarea>
                         </div>
                         <div class="swot_card">
                             <h2 class="swot_ttl">Weakness</h2>
@@ -55,17 +55,17 @@
                     </div>
                 </div>
             </div> 
-        </div>  
-        <div class = "form_con">
-            <div class="form_id_pass">
-                <h3>IDを入力してください</h3>
-                <input type="text" name="id_pass" value="<%= params[:id_pass] %>" >
+            <div class = "form_con">
+                <div class="form_id_pass">
+                    <h3>IDを入力してください</h3>
+                    <input type="text" name="id_pass" value="<%= params[:id_pass] %>" >
+                </div>
+                <p>初めて登録する方も、こちらに入力ください</p>
+                <div class="form_btn">
+                    <input type="submit" class="form_submit">
+                </div>  
             </div>
-            <p>初めて登録する方も、こちらに入力ください</p>
-            <div class="form_btn">
-                <input type="submit" class="form_submit">
-            </div>  
-        </div>  
+        </div>    
     <%end%>    
 
     <div class="search_con">
@@ -80,4 +80,4 @@
             <% end %>
         </span>
     </div>
-</div>    
+</div> 

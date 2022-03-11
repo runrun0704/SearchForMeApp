@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
     #SWOT
     get "swot" => "tool#swot"
+    post "swot" => "tool#swot_submit"
+    get "swot/:id_pass" => "tool#swot_result"
 
     #wct
     get "wcm" => "tool#wcm"
