@@ -15,9 +15,13 @@ Rails.application.routes.draw do
     get "swot" => "tool#swot"
     post "swot" => "tool#swot_submit"
     get "swot/:id_pass" => "tool#swot_result"
+    get "swot_search" => "tool#swot_search"
 
     #wct
     get "wcm" => "tool#wcm"
+    post "wcm" => "tool#wcm_submit"
+    get "wcm/:id_pass" => "tool#wcm_result"
+    get "wcm_search" => "tool#wcm_search"
 
     #mmp
     get "mmp" => "tool#mmp"

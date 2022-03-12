@@ -8,19 +8,19 @@
                 <div class="wcm_set">
                     <h2 class="wcm_ttl">Will</h2>
                     <p class="wcm_txt">やりたいこと</p>
-                    <textarea class="wcm_form" name = "will"></textarea>
+                    <textarea class="wcm_form" name = "will"><%= @wcm.will %></textarea>
                 </div>
 
                 <div class="wcm_set">
                     <h2 class="wcm_ttl">Can</h2>
                     <p class="wcm_txt">できること</p>
-                    <textarea class="wcm_form" name = "can"></textarea>
+                    <textarea class="wcm_form" name = "can"><%= @wcm.can %></textarea>
                 </div>
 
                 <div class="wcm_set">
                     <h2 class="wcm_ttl">Must</h2>
                     <p class="wcm_txt">やらなければならないこと</p>
-                    <textarea class="wcm_form" name = "must"></textarea>
+                    <textarea class="wcm_form" name = "must"><%= @wcm.must %></textarea>
                 </div>
 
                 <div class="wcm_bottom">
@@ -45,19 +45,5 @@
             </div>
         </div>
     <% end %>
-
-    <div class="search_con">
-        <div class="search_ttl">
-            <h3>IDが既存であればこちらに入力してください</h3>
-            <p>※こちらにIDを入力すると登録したWill,Can,Mustに移動します</p>
-        </div>
-        <div class="search_wrapper">
-            <%= form_tag("/wcm_search",{method:"get"}) do %>   
-                    <span class="mtv_search_form_wrapper"><%= text_field_tag :search ,"",{class: "mtv_search_form"} %></span>
-                    <span class="mtv_search_btn"><%= submit_tag '探す',class:"mtv_submit" %>
-            <% end %>
-        </span>
-    </div>
-
 
 </div>

@@ -67,4 +67,17 @@
             </div>
         </div>    
     <%end%>    
-</div> 
+
+    <div class="search_con">
+        <div class="search_ttl">
+            <h3>IDが既存であればこちらに入力してください</h3>
+            <p>※こちらにIDを入力すると登録したSWOT分析に移動します</p>
+        </div>
+        <div class="search_wrapper">
+            <%= form_tag("/my_history_search",{method:"get"}) do %>   
+                    <span class="mtv_search_form_wrapper"><%= text_field_tag :search ,"",{class: "mtv_search_form"} %></span>
+                    <span class="mtv_search_btn"><%= submit_tag '探す',class:"mtv_submit" %>
+            <% end %>
+        </span>
+    </div>
+</div>    
