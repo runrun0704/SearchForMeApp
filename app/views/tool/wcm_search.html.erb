@@ -38,7 +38,6 @@
                     <h3>IDを入力してください</h3>
                     <input type="text" name="id_pass" value="<%= params[:id_pass] %>" >
                 </div>
-                <p>初めて登録する方も、こちらに入力ください</p>
                 <div class="form_btn">
                     <input type="submit" class="form_submit">
                 </div>  
@@ -53,8 +52,8 @@
         </div>
         <div class="search_wrapper">
             <%= form_tag("/swot_search",{method:"get"}) do %>   
-                <span class="mtv_search_form_wrapper"><%= text_field_tag :search ,"",{class: "mtv_search_form"} %></span>
-                <span class="mtv_search_btn"><%= submit_tag '探す',class:"mtv_submit" %>
+                <span class="search_form_wrapper"><%= text_field_tag :search ,"",{class: "mtv_search_form"} %></span>
+                <span class="search_btn"><%= submit_tag '探す',class:"submit" %>
             <% end %>
         </span>
     </div>
