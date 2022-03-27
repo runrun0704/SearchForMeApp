@@ -17,6 +17,21 @@
             left: 29%;
         }
     }
+    .form_con{
+        margin: 0 auto;
+        padding:0 80px;
+        .form_id_pass{
+            display: inline-block;
+        }
+        .form_btn{
+            margin-right: 500px;
+            margin-left: 0;
+        }
+    }
+    .search_con{
+        margin:0 auto;
+        padding:0 80px;
+    }
 }
 @media (max-width:900px){
     .tool_top{
@@ -71,6 +86,11 @@
     .hint_modal_wrapper{
         .modal{
             left: 10%;
+        }
+    }
+    .search_con{
+        .search_form{
+            margin-bottom: 15px;
         }
     }
 }
